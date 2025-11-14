@@ -2,18 +2,20 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  // state untuk menyimpan jumlah klik
-  const [count, setCount] = React.useState(0);
-
   return (
-    <div className="App">
-      <h1>Selamat Datang di Website React Pertamaku!</h1>
-      <p>Kamu sudah menekan tombol ini {count} kali.</p>
-      <button onClick={() => setCount(count + 1)}>
-        Klik Aku
-      </button>
+    <div className="container mt-5">
+      <h1 className="text-center">Website React + Bootstrap</h1>
+
+      <div className="card mt-3">
+        <div className="card-body">
+          <h5 className="card-title">Card Title</h5>
+          <p className="card-text">Ini contoh card menggunakan Bootstrap.</p>
+          <button className="btn btn-success">Klik Aku</button>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default App;
+
