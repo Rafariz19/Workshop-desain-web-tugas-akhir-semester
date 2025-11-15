@@ -1,4 +1,15 @@
+import HeroSection from "../components/HeroSection";
+import ServicesSection from "../components/ServicesSection";
+import AboutSection from "../components/AboutSection";
+
 function Home() {
-  return <h1>Ini halaman Home</h1>;
+  return (
+    <>
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+    </>
+  );
 }
+
 export default Home;

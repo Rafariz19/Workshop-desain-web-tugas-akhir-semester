@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav-link {
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #0d6efd; /* biru bootstrap */
+  transform: translateY(-2px);
+}
+

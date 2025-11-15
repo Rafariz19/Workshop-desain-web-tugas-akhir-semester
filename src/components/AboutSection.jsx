@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function AboutSection() {
   return (
     <div className="container py-5">
@@ -19,7 +21,10 @@ function AboutSection() {
             desain UI/UX, serta layanan IT Consulting. Kami membantu bisnis Anda
             berkembang dengan solusi digital yang modern.
           </p>
-          <button className="btn btn-primary mt-3">Learn More</button>
+          <Link to="/about" className="btn btn-primary mt-3">
+            Learn More
+          </Link>
+
         </div>
       </div>
     </div>
