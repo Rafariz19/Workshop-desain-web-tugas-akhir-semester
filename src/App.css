@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.mobile-menu {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.mobile-menu.open {
+  max-height: 200px; /* cukup untuk 3 menu */
+}
+
+.mobile-menu.closed {
+  max-height: 0;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
