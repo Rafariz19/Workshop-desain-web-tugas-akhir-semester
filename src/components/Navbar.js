@@ -2,50 +2,112 @@ import { Link, useLocation } from "react-router-dom";
 import React, { useState } from "react";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
   const location = useLocation();
+  const [showDropdown, setShowDropdown] = useState(false);
 
-  const isActive = (path) => location.pathname === path ? "fw-bold text-primary" : "";
+  const isActive = (path) =>
+    location.pathname === path ? "active fw-bold" : "";
 
   return (
-    <nav className="d-flex justify-content-between align-items-center px-4 py-3 position-sticky top-0 bg-white shadow-sm" style={{ zIndex: 1000 }}>
-      <h2 className="m-0">TechNova Studio</h2>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div className="container">
 
-      {/* MENU DESKTOP */}
-      <ul className="navbar-nav ms-auto flex-row gap-4 d-none d-md-flex">
-        <li className="nav-item">
-          <Link className={`nav-link ${isActive("/")}`} to="/">Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link className={`nav-link ${isActive("/about")}`} to="/about">About</Link>
-        </li>
-        <li className="nav-item">
-          <Link className={`nav-link ${isActive("/contact")}`} to="/contact">Contact</Link>
-        </li>
-      </ul>
+        {/* LOGO DI KIRI */}
+        <Link className="navbar-brand fw-bold logo" to="/">
+          <img
+            src="/assets/lokalsumenep.png"
+            alt="TechNova"
+            style={{ height: "40px" }}
+          />
+        </Link>
 
-      {/* HAMBURGER BUTTON */}
-      <button 
-        className="d-md-none btn"
-        onClick={() => setOpen(!open)}
-      >
-        <i className="bi bi-list" style={{ fontSize: "1.8rem" }}></i>
-      </button>
+        {/* HAMBURGER */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-      {/* MENU MOBILE */}
-      {open && (
-        <ul className="navbar-nav gap-2 p-3 bg-white shadow position-absolute top-100 end-0 me-3 d-flex d-md-none rounded">
-          <li className="nav-item">
-            <Link className="nav-link" to="/" onClick={() => setOpen(false)}>Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/about" onClick={() => setOpen(false)}>About</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/contact" onClick={() => setOpen(false)}>Contact</Link>
-          </li>
-        </ul>
-      )}
+        {/* MENU */}
+        <div className="collapse navbar-collapse" id="navMenu">
+          <ul className="navbar-nav ms-auto">
+
+            {/* HOME */}
+            <li className="nav-item">
+              <Link className={`nav-link ${isActive("/")}`} to="/">
+                Home
+              </Link>
+            </li>
+
+            {/* SERVICES dengan Dropdown */}
+            <li
+              className="nav-item dropdown"
+              onMouseEnter={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}
+            >
+              <Link
+                className={`nav-link dropdown-toggle ${isActive("/services")}`}
+                to="/services"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded={showDropdown}
+              >
+                Services
+              </Link>
+              <ul className={`dropdown-menu ${showDropdown ? "show" : ""}`}>
+                <li>
+                  <Link className="dropdown-item" to="/services/transformasi-digital">
+                    Konsultasi Transformasi Digital
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/services/custom-software">
+                    Pengembangan Aplikasi
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/services/website-profile">
+                    Pembuatan Website & Company Profile
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/services/infrastruktur-it">
+                    IT Infrastructure Setup & Modernization
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/services/cloud">
+                    Cloud Migration & Cloud Services
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/services/cybersecurity">
+                    Cybersecurity Assessment
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            {/* ABOUT */}
+            <li className="nav-item">
+              <Link className={`nav-link ${isActive("/about")}`} to="/about">
+                About
+              </Link>
+            </li>
+
+            {/* CONTACT */}
+            <li className="nav-item">
+              <Link className={`nav-link ${isActive("/contact")}`} to="/contact">
+                Contact
+              </Link>
+            </li>
+
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 }

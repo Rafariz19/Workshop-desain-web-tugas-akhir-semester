@@ -7,11 +7,11 @@ function AboutSection() {
 
       <div className="row align-items-center">
         <div className="col-md-6">
-          <img 
+          {/* <img 
             src="https://via.placeholder.com/500x300" 
             alt="About"
             className="img-fluid rounded"
-          />
+          /> */}
         </div>
 
         <div className="col-md-6 mt-4 mt-md-0">
