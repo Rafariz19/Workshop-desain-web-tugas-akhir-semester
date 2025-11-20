@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import "aos/dist/aos.css";
+import "../pages/style/KPISection.css"; // pastikan file ini dibuat
 
 function KPISection() {
   useEffect(() => {
@@ -14,16 +16,18 @@ function KPISection() {
   ];
 
   return (
-    <div className="container py-5">
-      <div className="row text-center">
-        {stats.map((s, i) => (
-          <div className="col-md-3 mb-4" key={i} data-aos="fade-up" data-aos-delay={i * 150}>
-            <h2 className="fw-bold">{s.number}</h2>
-            <p className="text-muted">{s.label}</p>
-          </div>
-        ))}
+    <section className="kpi-section text-white text-center py-5">
+      <div className="container">
+        <div className="row">
+          {stats.map((s, i) => (
+            <div className="col-md-3 mb-4" key={i} data-aos="fade-up" data-aos-delay={i * 150}>
+              <h2 className="fw-bold">{s.number}</h2>
+              <p>{s.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

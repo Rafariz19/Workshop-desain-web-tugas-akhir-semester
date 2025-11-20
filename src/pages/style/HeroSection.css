@@ -1,0 +1,38 @@
+.hero-section {
+  position: relative;
+  background-color: #f2f2f2; /* abu-abu terang */
+  min-height: 90vh;
+  overflow: hidden;
+  padding: 3rem 1rem;
+}
+
+.content-wrapper {
+  z-index: 2;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.hero-overlay-left,
+.hero-overlay-right {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.hero-overlay-left {
+  left: 0;
+}
+
+.hero-overlay-right {
+  right: 0;
+}

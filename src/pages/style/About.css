@@ -1,0 +1,20 @@
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd, #00bfff);
+}
+
+.why-box {
+  transition: all 0.3s ease;
+  border-left: 5px solid #0d6efd;
+}
+
+.why-box:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-4px);
+}
+
+.sector-box {
+  font-weight: 600;
+  border: 1px solid #dee2e6;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}

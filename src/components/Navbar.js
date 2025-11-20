@@ -9,18 +9,18 @@ function Navbar() {
     location.pathname === path ? "active fw-bold" : "";
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container">
 
         {/* LOGO DI KIRI */}
-        <Link className="navbar-brand fw-bold logo" to="/">
-          <img
-            src="/assets/lokalsumenep.png"
-            alt="TechNova"
-            style={{ height: "40px" }}
-          />
-        </Link>
-
+        <Link className="navbar-brand fw-bold logo d-flex align-items-center" to="/">
+          <img
+            src="/a modern tech compan.png"
+            alt="TechNova Logo"
+            style={{ height: "60px", marginRight: "10px" }} // Tambahkan margin kanan untuk jarak
+          />
+          <span style={{ fontSize: "1.5rem" }}>TechNova</span> {/* Teks TechNova */}
+        </Link>
         {/* HAMBURGER */}
         <button
           className="navbar-toggler"
