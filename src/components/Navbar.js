@@ -59,32 +59,32 @@ function Navbar() {
               </Link>
               <ul className={`dropdown-menu ${showDropdown ? "show" : ""}`}>
                 <li>
-                  <Link className="dropdown-item" to="/services/transformasi-digital">
+                  <Link className="dropdown-item" to="/services1">
                     Konsultasi Transformasi Digital
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services/custom-software">
+                  <Link className="dropdown-item" to="/services2">
                     Pengembangan Aplikasi
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services/website-profile">
+                  <Link className="dropdown-item" to="/services3">
                     Pembuatan Website & Company Profile
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services/infrastruktur-it">
+                  <Link className="dropdown-item" to="/services4">
                     IT Infrastructure Setup & Modernization
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services/cloud">
+                  <Link className="dropdown-item" to="/services5">
                     Cloud Migration & Cloud Services
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/services/cybersecurity">
+                  <Link className="dropdown-item" to="/services6">
                     Cybersecurity Assessment
                   </Link>
                 </li>

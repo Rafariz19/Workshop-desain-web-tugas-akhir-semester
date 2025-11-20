@@ -106,7 +106,71 @@ function Services1() {
           </ul>
         </div>
       </section>
+
+
+    {/* Paket Transformasi Digital */}
+<section className="section-content py-5 text-center bg-white" data-aos="fade-up">
+  <div className="container">
+    <h3 className="fw-bold mb-4">Paket Transformasi Digital</h3>
+    <div className="row justify-content-center">
+      {[
+        {
+          title: "Starter",
+          color: "success",
+          features: [
+            "Review proses bisnis dasar",
+            "Rekomendasi teknologi sederhana",
+            "Roadmap digitalisasi 1 tahun",
+            "1 sesi konsultasi"
+          ]
+        },
+        {
+          title: "Growth",
+          color: "primary",
+          features: [
+            "Analisis proses bisnis menyeluruh",
+            "Integrasi sistem lama dan baru",
+            "Roadmap digitalisasi 3 tahun",
+            "3 sesi konsultasi + pelatihan tim"
+          ]
+        },
+        {
+          title: "Enterprise",
+          color: "purple",
+          features: [
+            "Audit dan redesign proses bisnis",
+            "Strategi teknologi lintas departemen",
+            "Roadmap digitalisasi 5 tahun",
+            "Implementasi + Change Management",
+            "Evaluasi & peningkatan berkelanjutan"
+          ]
+        }
+      ].map((pkg, i) => (
+        <div className="col-md-4 mb-4" key={i}>
+          <div className={`card border-${pkg.color} shadow-sm h-100`}>
+            <div className={`card-header bg-${pkg.color} text-white fw-bold`}>
+              Paket {pkg.title}
+            </div>
+            <div className="card-body d-flex flex-column justify-content-between">
+              <ul className="list-unstyled text-start mb-4">
+                {pkg.features.map((f, j) => (
+                  <li key={j} className="mb-2">
+                    <i className="bi bi-check-circle-fill text-primary me-2"></i>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a href="/contact" className="btn btn-outline-primary w-100">
+                Pilih Paket
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
+  </div>
+</section> 
+</div> 
   );
 }
 

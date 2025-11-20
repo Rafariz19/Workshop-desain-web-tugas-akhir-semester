@@ -60,3 +60,11 @@
   color: #007bff;
   font-weight: bold;
 }
+
+.bg-purple {
+  background-color: #6f42c1 !important;
+}
+
+.border-purple {
+  border-color: #6f42c1 !important;
+}
